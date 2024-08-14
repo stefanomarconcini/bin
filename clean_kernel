@@ -8,6 +8,6 @@ cd ~/uml/linux-5.4.14/
 #make mrproper ARCH=um
 ### compile current .config set using command ./configure_6.1.50
 make -j8 ARCH=um clean  
-
+##
 
 
