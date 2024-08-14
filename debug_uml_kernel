@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+cd ~/uml/linux-5.4.14/
+
+sed '/not set/d' -i $HOME/.ddd/init
+ddd --args ./linux ubda=~/uml/Gentoo-AMD64-root_fs mem=256m
+## if gdb hangs you need to cleanup with the following

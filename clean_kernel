@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# cleans pi4 6.1.50 /opt/KernelCache sources
+cd ~/uml/linux-5.4.14/
+
+### enable the following to compile default kernel with no symbles ###
+#make V=1 -j4 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2711_defconfig
+#make mrproper
+#make mrproper ARCH=um
+### compile current .config set using command ./configure_6.1.50
+make -j8 ARCH=um clean  
+
+
+

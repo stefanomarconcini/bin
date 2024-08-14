@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+cd ~/uml/linux-5.4.14/
+
+./linux ubda=../Gentoo-AMD64-root_fs mem=256m

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+cd ~/uml/linux-5.4.14/ 
+
+### enable the following to compile default kernel with no symbles ###
+#make V=1 -j4 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2711_defconfig
+
+### compile current .config set using command ./configure_6.1.50
+sudo mount -o loop ~/uml/Gentoo-AMD64-root_fs  /mnt/uml_root_fs/
+sudo make ARCH=um modules 
+sudo make ARCH=um modules_install INSTALL_MOD_PATH=/mnt/uml_root_fs
+sudo umount /mnt/uml_root_fs
+sync
+sync
+sync
+sync
+
+

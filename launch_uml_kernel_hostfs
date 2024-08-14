@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+cd ~/uml/linux-5.4.14/
+
+sudo ./linux root=/dev/root rootflags=/mnt/uml_root_fs rootfstype=hostfs

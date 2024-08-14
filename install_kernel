@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# compiles linux-5.4.14 Kernel sources
+cd ~/uml/linux-5.4.14/ 
+
+
+
+sudo mount -o loop ~/uml/Gentoo-AMD64-root_fs  /mnt/uml_root_fs/
+sudo make ARCH=um modules 
+sudo make ARCH=um modules_install INSTALL_MOD_PATH=/mnt/uml_root_fs
+
+

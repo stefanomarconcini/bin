@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# compiles linux-5.4.14 Kernel sources
+cd ~/uml/linux-5.4.14/ 
+
+
+### compile current .config set using command ./configure_6.1.50
+make -j8 linux ARCH=um
+make -j8 all ARCH=um
+
+
+
